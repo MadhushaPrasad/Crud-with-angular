@@ -1,0 +1,11 @@
+footer {
+  height: 50px;
+  background: linear-gradient(to right, purple, indigo);
+  text-align: center;
+  color: white;
+}
+
+footer > p {
+  margin: 0;
+  padding-top: 10px;
+}
