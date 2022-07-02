@@ -1,0 +1,10 @@
+ul {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  list-style: none;
+}
+
+ul > li {
+  padding-top: 30px;
+}
