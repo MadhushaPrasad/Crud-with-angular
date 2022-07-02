@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CustomerComponent } from './components/customer/customer.component';
-import { ItemComponent } from './components/item/item.component';
+import { CustomerComponent } from './views/customer/customer.component';
+import { ItemComponent } from './views/item/item.component';
+import { OrdersComponent } from './views/orders/orders.component';
+import { HeaderComponent } from './views/common/header/header.component';
+import { FooterComponent } from './views/common/footer/footer.component';
+import { SidebarComponent } from './views/common/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerComponent,
-    ItemComponent
+    ItemComponent,
+    OrdersComponent,
+    HeaderComponent,
+    FooterComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
