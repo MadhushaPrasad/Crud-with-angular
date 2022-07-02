@@ -16,6 +16,11 @@ const routes: Routes = [
   {
     path: 'orders',
     component: OrdersComponent
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'customer'
   }
 ];
 
