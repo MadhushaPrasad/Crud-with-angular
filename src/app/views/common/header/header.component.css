@@ -26,4 +26,5 @@ header > nav > ul {
 header > nav > ul > li {
   display: inline-block;
   padding: 20px;
+  cursor: pointer;
 }

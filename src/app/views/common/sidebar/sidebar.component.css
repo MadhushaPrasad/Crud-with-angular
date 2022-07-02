@@ -7,4 +7,5 @@ ul {
 
 ul > li {
   padding-top: 30px;
+  cursor: pointer;
 }
