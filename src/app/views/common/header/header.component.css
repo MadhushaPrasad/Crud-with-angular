@@ -28,3 +28,7 @@ header > nav > ul > li {
   padding: 20px;
   cursor: pointer;
 }
+
+.active {
+  color: darkblue;
+}

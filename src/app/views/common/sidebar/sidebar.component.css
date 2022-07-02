@@ -9,3 +9,7 @@ ul > li {
   padding-top: 30px;
   cursor: pointer;
 }
+
+.active {
+  color: darkblue;
+}
