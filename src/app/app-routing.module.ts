@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {CustomerComponent} from "./views/customer/customer.component";
 import {ItemComponent} from "./views/item/item.component";
 import {OrdersComponent} from "./views/orders/orders.component";
+import {NoContentComponent} from "./views/no-content/no-content.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     redirectTo: 'customer'
+  }, {
+    path: '**',
+    component: NoContentComponent
   }
 ];
 
