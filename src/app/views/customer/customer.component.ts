@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-customer',
@@ -8,7 +8,12 @@ import {Router} from "@angular/router";
 })
 export class CustomerComponent implements OnInit {
 
-  constructor(private router: Router) {
+  id: any = '';
+  name: any = '';
+
+  constructor(private router: Router, private actRouter: ActivatedRoute) {
+    this.id = this.actRouter.snapshot.paramMap.get('id');
+    this.name = this.actRouter.snapshot.paramMap.get('name');
   }
 
   ngOnInit(): void {
