@@ -24,7 +24,7 @@ import {NoContentComponent} from './views/no-content/no-content.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
