@@ -20,6 +20,13 @@ export class CustomerComponent implements OnInit {
   }
 
   navigateToItem() {
-    this.router.navigate(['/item']);
+    // this.router.navigate(['/item']);
+    this.router.navigate(['/item'],
+      {
+        queryParams: {
+          id: "C001",
+          name: "Madhusha"
+        }
+      });
   }
 }
