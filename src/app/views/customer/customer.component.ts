@@ -12,8 +12,13 @@ export class CustomerComponent implements OnInit {
   name: any = '';
 
   constructor(private router: Router, private actRouter: ActivatedRoute) {
-    this.id = this.actRouter.snapshot.paramMap.get('id');
-    this.name = this.actRouter.snapshot.paramMap.get('name');
+    // this.id = this.actRouter.snapshot.paramMap.get('id');
+    // this.name = this.actRouter.snapshot.paramMap.get('name');
+
+    this.actRouter.paramMap.subscribe((v) => {
+      this.id = v.get("id");
+      this.name = v.get("name");
+    });
   }
 
   ngOnInit(): void {
