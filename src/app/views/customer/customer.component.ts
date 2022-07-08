@@ -25,7 +25,7 @@ export class CustomerComponent implements OnInit {
       {
         queryParams: {
           id: "C001",
-          name: "Madhusha"
+          name: "Customer 01"
         }
       });
   }
