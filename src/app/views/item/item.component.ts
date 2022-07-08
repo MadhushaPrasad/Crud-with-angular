@@ -12,8 +12,14 @@ export class ItemComponent implements OnInit {
   name: any = '';
 
   constructor(private actRouter: ActivatedRoute) {
-    this.id = this.actRouter.snapshot.queryParamMap.get('id');
-    this.name = this.actRouter.snapshot.queryParamMap.get('name');
+    // this.id = this.actRouter.snapshot.queryParamMap.get('id');
+    // this.name = this.actRouter.snapshot.queryParamMap.get('name');
+
+
+    this.actRouter.queryParamMap.subscribe((v) => {
+      this.id = v.get("id");
+      this.name = v.get("name");
+    });
   }
 
   ngOnInit(): void {
