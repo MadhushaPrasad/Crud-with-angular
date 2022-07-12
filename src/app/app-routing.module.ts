@@ -4,6 +4,7 @@ import {CustomerComponent} from "./views/customer/customer.component";
 import {ItemComponent} from "./views/item/item.component";
 import {OrdersComponent} from "./views/orders/orders.component";
 import {NoContentComponent} from "./views/no-content/no-content.component";
+import {AuthGuard} from "./guard/auth-guard.service";
 
 const routes: Routes = [
   {
@@ -12,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'customer/:id',
-    component: CustomerComponent
+    component: CustomerComponent,
   },
   {
     path: 'customer/:id/:name',
@@ -20,7 +21,8 @@ const routes: Routes = [
   },
   {
     path: 'item',
-    component: ItemComponent
+    component: ItemComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'orders',
