@@ -5,4 +5,7 @@
     <p>Name : {{name}}</p>
   </div>
   <button (click)="navigateToItem()" class="btn btn-primary" style="cursor: pointer">Go to Item</button>
+
+  <!--  template variable-->
+  <input #txtInput (keydown.enter)="getText(txtInput)" type="text">
 </div>
