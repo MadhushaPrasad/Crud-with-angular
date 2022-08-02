@@ -36,6 +36,6 @@ export class CustomerComponent implements OnInit {
   }
 
   getText(txtInput: HTMLInputElement) {
-    console.log(txtInput)
+    console.log(txtInput.value)
   }
 }
