@@ -10,7 +10,8 @@
   <!--  template variable  #  -->
   <!--  event binding  ()  -->
   <!--  property binding-->
-  <h2 class="mt-3">{{Madhsuha}}</h2>
+  <!--  style binding-->
+  <h2 [style.color]="'blue'" class="mt-3">{{Madhsuha}}</h2>
 
   <input #txtInputOne (keydown.enter)="getText(txtInputOne)" class="form-control col mt-3" placeholder="Full Name"
          type="text">
