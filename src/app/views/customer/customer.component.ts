@@ -11,6 +11,7 @@ export class CustomerComponent implements OnInit {
   id: any = '';
   name: any = '';
   Madhsuha: any = "Madhusha Prasad";
+  inputValue: any = "Welcome to the angular tute";
 
   constructor(private router: Router, private actRouter: ActivatedRoute) {
     // this.id = this.actRouter.snapshot.paramMap.get('id');
