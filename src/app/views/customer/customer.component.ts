@@ -38,6 +38,7 @@ export class CustomerComponent implements OnInit {
   }
 
   getText(txtInput: HTMLInputElement) {
-    console.log(txtInput.value)
+    console.log(txtInput.value + "hello")
+    this.Madhsuha = txtInput.value;
   }
 }
