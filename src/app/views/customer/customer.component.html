@@ -22,12 +22,18 @@
         <input [value]="inputValue" class="form-control" type="text">
       </div>
 
+      <!--      2 way binding without directives-->
       <div class="form-group">
         <input #txtInput (keydown.enter)="getText(txtInput)" class="form-control col mt-3" type="text">
       </div>
       <button (click)="getText(txtInput)" class="btn btn-danger mt-2">
         send Details
       </button>
+
+      <!--      2 way binding with directives [(ngModel)] -->
+      <div class="form-group">
+        <input [(ngModel)]="Madhsuha" class="form-control col mt-3" type="text">
+      </div>
     </div>
   </div>
 </div>

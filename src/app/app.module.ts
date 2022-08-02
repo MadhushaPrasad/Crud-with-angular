@@ -10,6 +10,7 @@ import {HeaderComponent} from './views/common/header/header.component';
 import {FooterComponent} from './views/common/footer/footer.component';
 import {SidebarComponent} from './views/common/sidebar/sidebar.component';
 import {NoContentComponent} from './views/no-content/no-content.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,8 +26,10 @@ import {NoContentComponent} from './views/no-content/no-content.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
