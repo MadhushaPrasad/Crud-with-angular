@@ -7,3 +7,15 @@ h1 {
   font-weight: bold;
   color: indigo;
 }
+
+.myClassTwo {
+  font-size: 45px;
+  font-weight: bold;
+  color: darkgreen;
+}
+
+.myClassThree {
+  font-size: 45px;
+  font-weight: bold;
+  color: red;
+}
