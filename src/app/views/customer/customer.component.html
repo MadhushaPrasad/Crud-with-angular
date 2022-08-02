@@ -6,6 +6,9 @@
   </div>
   <button (click)="navigateToItem()" class="btn btn-primary" style="cursor: pointer">Go to Item</button>
   <br>
-  <!--  template variable-->
-  <input #txtInput (keydown.enter)="getText(txtInput)" class="form-control col mt-3" type="text">
+
+  <!--  template variable  #  -->
+  <!--  event binding  ()  -->
+  <!--  property binding-->
+  <input #txtInput (keydown.enter)="getText(txtInput)" [value]="Madhsuha" class="form-control col mt-3" type="text">
 </div>

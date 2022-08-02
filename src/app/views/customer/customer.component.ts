@@ -10,6 +10,7 @@ export class CustomerComponent implements OnInit {
 
   id: any = '';
   name: any = '';
+  Madhsuha: any = "Madhusha Prasad";
 
   constructor(private router: Router, private actRouter: ActivatedRoute) {
     // this.id = this.actRouter.snapshot.paramMap.get('id');
