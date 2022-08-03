@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-customer',
@@ -51,11 +52,15 @@ export class CustomerComponent implements OnInit {
     this.Madhsuha = txtInput.value;
   }
 
-  saveCustomer() {
-    const newCustomer = {id: this.customerID, name: this.customerName, address: this.customerAddress}
+  saveCustomer(formData: NgForm) {
+    const newCustomer = formData.form.value;
+    console.log(formData.form.value);
+
     this.customers.push(newCustomer);
     this.customerID = "";
     this.customerName = "";
     this.customerAddress = "";
+
+    console.log(formData);
   }
 }
