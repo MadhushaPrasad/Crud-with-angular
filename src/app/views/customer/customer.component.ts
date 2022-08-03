@@ -18,10 +18,7 @@ export class CustomerComponent implements OnInit {
   customerName: any;
   customerID: any;
   customerAddress: any;
-  customers: any [] = [
-    {id: "001", name: "Madhsuha Prasad", address: "Kalutara"},
-    {id: "002", name: "Silva A.D.M.P.", address: "Colombo"}
-  ];
+  customers: any [] = [];
 
   constructor(private router: Router, private actRouter: ActivatedRoute) {
     // this.id = this.actRouter.snapshot.paramMap.get('id');
