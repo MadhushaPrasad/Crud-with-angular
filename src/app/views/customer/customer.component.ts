@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {NgForm} from "@angular/forms";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-customer',
@@ -18,10 +18,13 @@ export class CustomerComponent implements OnInit {
   customerName: any;
   customerID: any;
   customerAddress: any;
-  customers: any [] = [
-    {id: "001", name: "Madhsuha Prasad", address: "Kalutara"},
-    {id: "002", name: "Silva A.D.M.P.", address: "Colombo"}
-  ];
+  customers: any [] = [];
+
+  form: FormGroup = new FormGroup({
+    id: new FormControl(),
+    name: new FormControl(),
+    address: new FormControl()
+  });
 
   constructor(private router: Router, private actRouter: ActivatedRoute) {
     // this.id = this.actRouter.snapshot.paramMap.get('id');
@@ -52,15 +55,14 @@ export class CustomerComponent implements OnInit {
     this.Madhsuha = txtInput.value;
   }
 
-  saveCustomer(formData: NgForm) {
-    const newCustomer = formData.form.value;
-    console.log(formData.form.value);
-
+  saveCustomer() {
+    const newCustomer = this.form.value;
     this.customers.push(newCustomer);
-    this.customerID = "";
-    this.customerName = "";
-    this.customerAddress = "";
+    this.form.reset();
+    console.log(this.form);
+  }
 
-    console.log(formData);
+  updateCustomer(customer: any) {
+    console.log(customer)
   }
 }
