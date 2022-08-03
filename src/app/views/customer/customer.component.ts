@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-customer',
@@ -21,9 +21,10 @@ export class CustomerComponent implements OnInit {
   customers: any [] = [];
 
   form: FormGroup = new FormGroup({
-    id: new FormControl(),
-    name: new FormControl(),
-    address: new FormControl()
+    id: new FormControl('', [Validators.required, Validators.pattern('(c00)[0-9]{1,2}'),
+      Validators.minLength(4)],),
+    name: new FormControl('', [Validators.required]),
+    address: new FormControl('', [Validators.required])
   });
 
   constructor(private router: Router, private actRouter: ActivatedRoute) {
@@ -56,10 +57,11 @@ export class CustomerComponent implements OnInit {
   }
 
   saveCustomer() {
-    const newCustomer = this.form.value;
-    this.customers.push(newCustomer);
-    this.form.reset();
     console.log(this.form);
+    // const newCustomer = this.form.value   ;
+    // this.customers.push(newCustomer);
+    // this.form.reset();
+    // console.log(this.form);
   }
 
   updateCustomer(customer: any) {
