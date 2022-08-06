@@ -19,6 +19,7 @@ export class CustomerComponent implements OnInit {
   customerID: any;
   customerAddress: any;
   customers: any [] = [];
+  isCustomerClickEditButton: boolean = false;
 
   form: FormGroup = new FormGroup({
     id: new FormControl('', [Validators.required, Validators.pattern('(c00)[0-9]{1,2}'),
@@ -58,11 +59,29 @@ export class CustomerComponent implements OnInit {
 
   saveCustomer() {
     const newCustomer = this.form.value;
-    this.customers.push(newCustomer);
-    this.form.reset();
+    if (this.isCustomerClickEditButton) {
+      this.updateCustomer(newCustomer);
+    } else {
+      this.customers.push(newCustomer);
+      this.form.reset();
+    }
   }
 
-  updateCustomer(customer: any) {
-    console.log(customer)
+  editCustomer(customer: any) {
+    this.customerID = customer.id;
+    this.customerName = customer.name;
+    this.customerAddress = customer.address;
+    this.isCustomerClickEditButton = true;
   }
+
+  updateCustomer(newCustomer: any) {
+    const arrayIndex = this.customers.indexOf(newCustomer);
+    
+  }
+
+  deleteCustomer(customer: any) {
+    const arrayIndex = this.customers.indexOf(customer);
+    this.customers.splice(arrayIndex, 1);
+  }
+
 }
