@@ -76,7 +76,7 @@ export class CustomerComponent implements OnInit {
 
   updateCustomer(newCustomer: any) {
     const arrayIndex = this.customers.indexOf(newCustomer);
-    
+    this.customers[arrayIndex] = newCustomer;
   }
 
   deleteCustomer(customer: any) {
