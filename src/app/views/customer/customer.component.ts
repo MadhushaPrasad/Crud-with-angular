@@ -57,11 +57,9 @@ export class CustomerComponent implements OnInit {
   }
 
   saveCustomer() {
-    console.log(this.form);
-    // const newCustomer = this.form.value   ;
-    // this.customers.push(newCustomer);
-    // this.form.reset();
-    // console.log(this.form);
+    const newCustomer = this.form.value;
+    this.customers.push(newCustomer);
+    this.form.reset();
   }
 
   updateCustomer(customer: any) {
