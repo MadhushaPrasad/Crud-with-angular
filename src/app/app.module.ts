@@ -11,6 +11,7 @@ import {FooterComponent} from './views/common/footer/footer.component';
 import {SidebarComponent} from './views/common/sidebar/sidebar.component';
 import {NoContentComponent} from './views/no-content/no-content.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {CustomPPipe} from './pipes/custom-p.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     FooterComponent,
     SidebarComponent,
     NoContentComponent,
+    CustomPPipe,
   ],
   imports: [
     BrowserModule,

@@ -20,6 +20,9 @@ export class CustomerComponent implements OnInit {
   customerAddress: any;
   customers: any [] = [];
   isCustomerClickEditButton: boolean = false;
+  myAddress: string = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias at dignissimos ea eligendi\n" +
+    "      exercitationem fugit libero numquam odio, perspiciatis similique suscipit tenetur voluptas? Nostrum odio quo\n" +
+    "      voluptate. Ex, nam."
 
   form: FormGroup = new FormGroup({
     id: new FormControl('', [Validators.required, Validators.pattern('(c00)[0-9]{1,2}'),
@@ -83,5 +86,4 @@ export class CustomerComponent implements OnInit {
     const arrayIndex = this.customers.indexOf(customer);
     this.customers.splice(arrayIndex, 1);
   }
-
 }
