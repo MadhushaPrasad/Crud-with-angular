@@ -54,18 +54,21 @@
       <form (ngSubmit)="saveCustomer()" [formGroup]="form">
         <div class="form-group mt-2">
           <label for="custID">Customer ID</label>
-          <input class="form-control mt-2" formControlName="id" id="custID" name="id" type="text">
+          <input [value]="customerID" class="form-control mt-2" formControlName="id" id="custID" name="id" type="text">
         </div>
         <div class="form-group mt-2">
           <label for="custName">Customer Name</label>
-          <input class="form-control mt-2" formControlName="name" id="custName" name="name" type="text">
+          <input [value]="customerName" class="form-control mt-2" formControlName="name" id="custName" name="name"
+                 type="text">
         </div>
         <div class="form-group mt-2">
           <label for="custAddress">Customer Address</label>
           <input class="form-control mt-2" formControlName="address" id="custAddress" name="address"
+                 [value]="customerAddress"
                  type="text">
         </div>
-        <button class="btn btn-primary mt-3">Save Customer</button>
+        <button class="btn btn-success mt-3 me-3">Save Customer</button>
+        <button class="btn btn-primary mt-3">Update Customer</button>
       </form>
     </div>
   </div>
@@ -86,11 +89,14 @@
       <td>{{customer.name}}</td>
       <td>{{customer.address}}</td>
       <td>
-        <i (click)="updateCustomer(customer)" aria-hidden="true" class="fa fa-pencil-square me-2 text-primary"
+        <i (click)="editCustomer(customer)" aria-hidden="true" class="fa fa-pencil-square me-2 text-primary"
            style="cursor:pointer;"></i>
-        <i aria-hidden="true" class="fa fa-trash text-danger" style="cursor:pointer;"></i>
+        <i (click)="deleteCustomer(customers)" aria-hidden="true" class="fa fa-trash text-danger"
+           style="cursor:pointer;"></i>
       </td>
     </tr>
     </tbody>
+    <p>{{myAddress}}</p>
+    <p>{{myAddress | customP}}</p>
   </table>
 </div>
